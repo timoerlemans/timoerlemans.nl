@@ -46,7 +46,7 @@
   "dependencies": {
     "bourbon": "4.3.3",
     "bourbon-neat": "1.8.0",
-    "normalize.css": "^6.0.0",
+    "normalize.css": "^7.0.0",
     "svgxuse": "^1.2.3",
 	"jquery": "^3.2.0"
   }
