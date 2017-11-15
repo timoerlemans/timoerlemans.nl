@@ -2,7 +2,7 @@
 $output-bourbon-deprecation-warnings: false;
 @import '02-generic/_generic';
 
-@import url('https://fonts.googleapis.com/css?family=Bitter:700');
+
 
 body {
 	background-color: #74bd00;
@@ -148,4 +148,14 @@ a {
 			}
 		}
 	}
+}
+
+
+.hoverrr {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+
 }

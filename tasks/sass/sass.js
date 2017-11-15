@@ -16,6 +16,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const rev = require('gulp-rev');
 const sourcemaps = require('gulp-sourcemaps');
+const inlineCss = require('gulp-inline');
 
 const cssPath = conf.path.build + '/css';
 const debug = process.env.NODE_ENV !== 'production';
@@ -31,16 +32,16 @@ const compilesass = () => {
 			conf.path.css + '/styles.scss'
 		])
 		.pipe(handleError('sass', 'SASS compiling failed'))
-		.pipe(gulpif(debug, sourcemaps.init()))
+	//	.pipe(gulpif(debug, sourcemaps.init()))
 		.pipe(sass().on('error', sass.logError))
 		.pipe(cleanCSS({
-			level: debug ? 0 : 2
+			level: {2: {specialComments: 'all'}}
 		}))
 		.pipe(autoprefixer({
-			browsers: ['last 3 versions', 'ios_saf 7']
+			browsers: ['last 2 versions', 'ios_saf 8', 'ie 11']
 		}))
 		// Normal output
-		.pipe(gulpif(debug, sourcemaps.write('./')))
+		//.pipe(gulpif(debug, sourcemaps.write('./')))
 		.pipe(gulp.dest(cssPath))
 
 		// Revisioned output
@@ -53,7 +54,18 @@ const compilesass = () => {
 		.pipe(handleSuccess('sass', 'SASS compiling succeeded'));
 }
 
-const sassTask = gulp.series(cleansass, compilesass);
+
+const inlinecss = () => {
+	return gulp.src('./src/*.html')
+        .pipe(inlineCss({
+            base: 'src/',
+            css: [],
+            disabledTypes: ['svg', 'img', 'js'], // Only inline css files
+        }))
+        .pipe(gulp.dest('./'));
+}
+
+const sassTask = gulp.series(cleansass, compilesass, inlinecss);
 
 gulp.task('sass', sassTask);
 
