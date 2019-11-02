@@ -3,7 +3,7 @@ $color-text: #333;
 $color-black: #000;
 
 @import '~modern-normalize';
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap&subset=latin');
+@import 'typography';
 html {
   font-family: 'Muli', sans-serif;
   line-height: 1.5;
