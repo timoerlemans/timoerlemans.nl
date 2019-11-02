@@ -1,0 +1,67 @@
+$color-highlight: #f10000;
+$color-text: #333;
+$color-black: #000;
+
+@import '~modern-normalize';
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap&subset=latin');
+html {
+  font-family: 'Muli', sans-serif;
+  line-height: 1.5;
+  color: $color-text;
+}
+
+body {
+  background: #eaeaea;
+}
+
+.logo {
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+  }
+}
+
+h1 {
+  margin: 0;
+  background-color: $color-highlight;
+  text-align: center;
+  padding: 10px 30px;
+  color: #fff;
+  @media screen and (min-width: 768px) {
+    font-size: 3.5em;
+  }
+}
+
+.wrapper {
+  padding: 15px;
+}
+
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 1.5em;
+  @media screen and (min-width: 768px) {
+    font-size: 2.5em;
+  }
+}
+
+p {
+  font-size: 1.125em;
+  @media screen and (min-width: 768px) {
+    font-size: 1.25em;
+  }
+}
+
+a {
+  color: $color-highlight;
+  text-decoration: underline;
+  font-style: italic;
+
+  &:hover,
+  &:focus {
+    color: $color-black;
+  }
+}
+
