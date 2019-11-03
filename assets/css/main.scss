@@ -42,14 +42,17 @@ h1 {
 }
 
 h2 {
-  font-size: 1.75em;
+  font-size: 1.5em;
   @media screen and (min-width: $breakpoint) {
     font-size: 2.5em;
   }
 }
 
 p {
+  font-size: 1.125em;
+  @media screen and (min-width: $breakpoint) {
     font-size: 1.25em;
+  }
 }
 
 a {
