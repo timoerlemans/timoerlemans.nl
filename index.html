@@ -7,15 +7,23 @@
     <title>Tim Oerlemans - front-end developer</title>
 </head>
 <body>
-
+            <input type="checkbox" id="switch" class="color-switch-checkbox">
+<div class="body">
 <header class="header">
     <div class="logo">
-        <h1 class="title">
-            <span>Tim Oerlemans</span>
-        </h1>
+        <div class="title">
+            <h1>Tim Oerlemans</h1>
+        </div>
     </div>
 </header>
 <main class="wrapper">
+            <label for="switch" class="color-switch">
+                <div class="toggle"></div>
+                <div class="names">
+                    <p class="light">Light</p>
+                    <p class="dark">Dark</p>
+                </div>
+            </label>
     <div class="content">
         <h2>Hi, my name is Tim Oerlemans.</h2>
         <p>I'm a front-end developer who lives and works in The Netherlands. I strongly believe that the web should be
@@ -26,6 +34,9 @@
         </p>
     </div>
 </main>
+
+</div>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
 
