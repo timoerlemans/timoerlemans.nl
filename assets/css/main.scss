@@ -1,33 +1,60 @@
-$color-highlight: #f10000;
-$color-text: #333;
-$color-black: #000;
-$breakpoint: 1024px;
+.body,
+#switch + .body {
+  --color-background: #eaeaea;
+  --color-highlight: #f10000;
+  --color-text: #333;
+  --color-heading: #000;
+  --color-highlight-text: #fff;
+  --breakpoint: 1024px;
+}
+
+.body.dark-theme,
+#switch:checked + .body {
+  --color-heading: #fff;
+  --color-text: #eee;
+  --color-background: #373737;
+}
+
+@media (prefers-color-scheme: dark) {
+.body,
+#switch + .body {
+    --color-heading: #fff;
+    --color-text: #eee;
+    --color-background: #373737;
+  }
+  .body.light-theme,
+ #switch:checked + .body {
+    --color-background: #eaeaea;
+    --color-text: #333;
+    --color-heading: #000;
+  }
+}
 
 @import '~modern-normalize';
 @import 'typography';
 html {
   font-family: 'Muli', sans-serif;
   line-height: 1.5;
-  color: $color-text;
+  color: var(--color-text);
 }
 
 body {
-  background: #eaeaea;
+  background: var(--color-background);
 }
 
 .logo {
-  @media screen and (min-width: $breakpoint) {
+  @media screen and (min-width: var(--breakpoint)) {
     display: inline-block;
   }
 }
 
 h1 {
   margin: 0;
-  background-color: $color-highlight;
+  background-color: var(--color-highlight);
   text-align: center;
   padding: 10px 30px;
-  color: #fff;
-  @media screen and (min-width: $breakpoint) {
+  color: var(--color-highlight-text);
+  @media screen and (min-width: var(--breakpoint)) {
     font-size: 3.5em;
   }
 }
@@ -43,30 +70,60 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  @media screen and (min-width: $breakpoint) {
+  color: var(--color-heading);
+  @media screen and (min-width: var(--breakpoint)) {
     font-size: 2.5em;
   }
 }
 
 p {
   font-size: 1.125em;
-  @media screen and (min-width: $breakpoint) {
-    font-size: 1.25em;
+  color: var(--color-text);
+  @media screen and (min-width: var(--breakpoint)) {
+    font-size: 1.5em;
   }
 }
 
 a {
-  color: $color-highlight;
+  color: var(--color-highlight);
   text-decoration: underline;
   font-weight: bold;
 
   &:hover,
   &:focus {
-    color: $color-black;
+    color: var(--color-heading);
   }
 
   &:active {
-    border: 1px solid $color-highlight;
+    border: 1px solid var(--color-highlight);
   }
 }
 
+.color-switch {
+  &-checkbox {
+    display: none;
+  }
+}
+
+.dark {
+  opacity: .5;
+}
+
+.color-switch-checkbox + .body .color-switch {
+  .dark {
+  display: none;
+}
+.light {
+  display: block;
+}
+}
+
+.color-switch-checkbox:checked + .body .color-switch {
+  .dark {
+    display: block;
+  }
+
+  .light {
+    display: none;
+  }
+}
