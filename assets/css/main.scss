@@ -1,4 +1,4 @@
-@import 'modern-normalize';
+@import '~/node_modules/modern-normalize';
 @import 'typography';
 
 $breakpoint: 1024px;
@@ -94,7 +94,7 @@ a {
 }
 
 .color-switch {
-  position: absolute;
+  position: fixed;
   display: inline-block;
   width: 60px;
   height: 34px;
