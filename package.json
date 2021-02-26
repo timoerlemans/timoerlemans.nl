@@ -2,10 +2,10 @@
   "name": "timoerlemans.nl",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.html",
   "scripts": {
     "watch": "parcel watch index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --no-source-maps",
     "start": "parcel serve index.html"
   },
   "devDependencies": {
