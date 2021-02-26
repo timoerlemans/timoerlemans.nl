@@ -1,3 +1,6 @@
+@import 'modern-normalize';
+@import 'typography';
+
 $breakpoint: 1024px;
 
 .body {
@@ -15,8 +18,7 @@ $breakpoint: 1024px;
   --color-background: #373737;
 }
 
-@import '~modern-normalize';
-@import 'typography';
+
 
 html {
   font-family: 'Muli', sans-serif;
