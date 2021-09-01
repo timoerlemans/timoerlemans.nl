@@ -1,43 +1,25 @@
 {
-  "name": "timoerlemans.nl",
+  "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.html",
+  "main": ".eleventy.js",
   "scripts": {
-    "watch": "parcel watch index.html",
-    "build": "parcel build index.html --no-source-maps",
-    "start": "parcel serve index.html"
+    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "cross-env NODE_ENV=production npx gulp && cross-env NODE_ENV=production npx eleventy"
   },
-  "devDependencies": {
-    "@parcel/optimizer-cssnano": "^2.0.0-nightly.611",
-    "@parcel/optimizer-htmlnano": "^2.0.0-nightly.611",
-    "@parcel/packager-css": "^2.0.0-nightly.611",
-    "@parcel/packager-html": "^2.0.0-nightly.611",
-    "@parcel/transformer-css": "^2.0.0-nightly.611",
-    "@parcel/transformer-html": "^2.0.0-nightly.611",
-    "@parcel/transformer-postcss": "^2.0.0-nightly.611",
-    "@parcel/transformer-posthtml": "^2.0.0-nightly.611",
-    "@parcel/transformer-sass": "^2.0.0-nightly.611",
-    "parcel": "^2.0.0-nightly.609",
-    "postcss": "^8.2.10"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timoerlemans/timoerlemans.nl.git"
-  },
-  "author": "Tim Oerlemans <tim@oerlemans.dev>",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/timoerlemans/timoerlemans.nl/issues"
-  },
-  "homepage": "https://github.com/timoerlemans/timoerlemans.nl#readme",
   "dependencies": {
-    "css": "^3.0.0",
-    "js": "^0.1.0",
-    "modern-normalize": "^1.0.0",
-    "sass": "^1.32.8"
-  },
-  "engines": {
-    "node": ">= 12.0.0"
+    "@11ty/eleventy": "^0.12.1",
+    "concurrently": "^6.2.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "gorko": "^0.7.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^4.1.0",
+    "modern-normalize": "^1.1.0",
+    "sass": "^1.38.2"
   }
 }

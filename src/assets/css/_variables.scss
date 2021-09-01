@@ -1,0 +1,20 @@
+$breakpoint: 1024px !default;
+
+.body {
+  --color-background: #eaeaea;
+  --color-highlight: #f10000;
+  --color-nav-background: #373737;
+  --color-text: #333;
+  --color-heading: #000;
+  --color-highlight-text: #fff;
+  --color-links: #f10000;
+  min-height: 100vh;
+}
+
+#switch:checked + .body {
+  --color-heading: #fff;
+  --color-text: #eee;
+  --color-background: #373737;
+  --color-nav-background: #eaeaea;
+  --color-links: #ff7272;
+}

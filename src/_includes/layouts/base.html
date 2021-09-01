@@ -1,0 +1,78 @@
+{% set assetHash = global.random() %}
+<!DOCTYPE html>
+<html lang="en">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tim Oerlemans - front-end developer{% endblock %} {% if title %}- Tim Oerlemans{% endif %}</title>
+    <style>{% include "css/critical.css" %}</style>
+    <style>{% include "css/base.css" %}</style>
+
+    {# Add facility for pages to delare an array of critical styles #}
+    {% if pageCriticalStyles %}
+        {% for item in pageCriticalStyles %}
+            <style>{% include item %}</style>
+        {% endfor %}
+    {% endif %}
+    <link rel="stylesheet" media="print" href="/css/fonts.css?{{ assetHash }}" onload="this.media='all'"/>
+    {# Add facility for pages to declare an array of stylesheet paths #}
+    {% if pageStylesheets %}
+        {% for item in pageStylesheets %}
+            <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'"/>
+        {% endfor %}
+    {% endif %}
+
+</head>
+<body>
+<input checked="" class="color-switch-checkbox" id="switch" type="checkbox">
+<div class="body">
+    <header class="header">
+        <div class="logo">
+            <div class="title">
+                <h3 class="header__title">Tim Oerlemans</h3>
+            </div>
+        </div>
+        {# {% if navigation.items.length > 1 %} #}
+        {# <ul class="nav__list"> #}
+        {# {% for item in navigation.items %} #}
+        {# <li class="nav__item"> #}
+        {# {% if helpers.linkIsActiveLink(item.url, page.url) %} #}
+        {# <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span> #}
+        {# {% else %} #}
+        {# <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}" #}
+        {# href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} #}
+        {# >{{ item.text }}</a #}
+        {# > #}
+        {# {% endif %} #}
+        {# </li> #}
+        {# {% endfor %} #}
+        {# </ul> #}
+
+        {# {% endif %} #}
+    </header>
+    <main class="wrapper">
+        <div class="content">
+            {% block content %}
+                <h2>Hi, my name is Tim Oerlemans.</h2>
+                <p>I'm a front-end developer who lives and works in The Netherlands. I strongly believe that the web
+                    should
+                    be
+                    for everyone, and therefore I'm trying to make it as accessible and user-friendly as possible.
+                </p>
+                <p>Currently, I'm doing just that while working at <a href="https://www.vanspaendonck.nl/"
+                                                                      rel="noreferrer"
+                                                                      target="_blank">Van Spaendonck Development</a> in
+                    Tilburg, where I work on products like <a href="https://www.loket.nl/" rel="noreferrer"
+                                                              target="_blank">Loket</a>
+                    and <a href="https://www.clever.nl/" rel="noreferrer" target="_blank">Clever</a>.
+                </p>
+            {% endblock %}
+        </div>
+    </main>
+    <label class="color-switch" for="switch">
+        <span class="slider round"></span>
+    </label>
+</div>
+</body>
+</html>
