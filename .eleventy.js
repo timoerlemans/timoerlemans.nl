@@ -9,7 +9,7 @@ module.exports = config => {
 
     config.addWatchTarget('./src/assets/');
 
-    config.addCollection('blogposts',
+    config.addCollection('blog',
             collection => sortBlogPostsByDate(collection));
 
     return {

@@ -48,23 +48,23 @@
                 <h3 class="header__title">Tim Oerlemans</h3>
             </div>
         </div>
-        {# {% if navigation.items.length > 1 %} #}
-        {# <ul class="nav__list"> #}
-        {# {% for item in navigation.items %} #}
-        {# <li class="nav__item"> #}
-        {# {% if helpers.linkIsActiveLink(item.url, page.url) %} #}
-        {# <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span> #}
-        {# {% else %} #}
-        {# <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}" #}
-        {# href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }} #}
-        {# >{{ item.text }}</a #}
-        {# > #}
-        {# {% endif %} #}
-        {# </li> #}
-        {# {% endfor %} #}
-        {# </ul> #}
+         {% if navigation.items.length > 1 %}
+         <ul class="nav__list">
+         {% for item in navigation.items %}
+         <li class="nav__item">
+         {% if helpers.linkIsActiveLink(item.url, page.url) %}
+         <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
+         {% else %}
+         <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
+         href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+         >{{ item.text }}</a
+         >
+         {% endif %}
+         </li>
+         {% endfor %}
+         </ul>
 
-        {# {% endif %} #}
+         {% endif %}
     </header>
     <main class="wrapper">
         <div class="content">
