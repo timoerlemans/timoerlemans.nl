@@ -2,7 +2,7 @@
 title: 'Book review: Breach of Peace by Daniel B. Greene'
 layout: 'layouts/blogposts.html'
 author: 'Tim Oerlemans'
-postDate: '2021-09-23
+postDate: '2021-09-23'
 ---
 
 I discovered [Daniel's YouTube channel](https://www.youtube.com/c/DanielGreeneReviews) a few months ago, and I have watched every video he published since. I was an avid fantasy reader until a few years ago when I got more into science fiction and non-fiction books, and I practically stopped reading fantasy books altogether. Watching Daniel's video helped me rekindle my love for fantasy books and also taught me to not only read a book for its plot but also, or even more so, for its characters and worldbuilding. One of the first videos I watched on his channel was about his book, Breach of Peace. I was a bit sceptical about it because it was his first book, self-published, and he was just a guy who made videos about books. So I didn't have any intention of reading his book. But after a few months, I stumbled on the Goodreads page of his book, and it had a good rating and positive reviews. So I looked up at Amazon, and it was only a few books and at 95 pages, quite a short read. So I decided to try it. And boy, am I glad I did!
