@@ -10,9 +10,7 @@
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
 
-    {% if canonical %}
-    <link rel="canonical" href="/blog/{{ canonical }}">
-    {% endif %}
+
 
     {# Add facility for pages to delare an array of critical styles #}
     {% if pageCriticalStyles %}
@@ -32,8 +30,9 @@
     <meta name="googlebot" content="index,follow">
     <link rel="canonical" href="https://www.timoerlemans.nl{{ page.url }}">
     <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
-    {% if content.canonical %}
-        <link rel="canonical" href="/blog/{{ content.postDate }}/{{ content.title }}">
+    {% if canonical %}
+        <link rel="canonical" href="https://www.timoerlemans.nl/blog/{{ canonical }}">
+        <link rel="canonical" href="https://tim.oerlemans.dev/blog/{{ canonical }}">
     {% endif %}
     <link href="https://github.com/timoerlemans" rel="me">
     <link href="https://www.twitter.com/timoerlemans" rel="me">
