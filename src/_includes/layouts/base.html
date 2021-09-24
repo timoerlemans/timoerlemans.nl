@@ -1,10 +1,11 @@
 {% set assetHash = global.random() %}
 <!DOCTYPE html>
 <html lang="en">
-<meta content="width=device-width, initial-scale=1" name="viewport">
 
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
     <title>{% block title %}Tim Oerlemans - front-end developer{% endblock %} {% if title %}- Tim Oerlemans{% endif %}</title>
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
@@ -22,22 +23,16 @@
             <link rel="stylesheet" media="print" href="{{ item }}?{{ assetHash }}" onload="this.media='all'"/>
         {% endfor %}
     {% endif %}
-    <!-- Matomo -->
-    <script>
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="https://timoerlemansdev.matomo.cloud/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src='//cdn.matomo.cloud/timoerlemansdev.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-    </script>
-    <!-- End Matomo Code -->
-
+    <meta name="theme-color" content="#f10000">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <link rel="canonical" href="https://www.timoerlemans.nl/{{ page.url }}">
+    <link rel="canonical" href="https://tim.oerlemans.dev/{{ page.url }}">
+    <link href="https://github.com/timoerlemans" rel="me">
+    <link href="https://www.twitter.com/timoerlemans" rel="me">
+    <link href="mailto:tim@oerlemans.dev" rel="me">
+    <link href="https://www.linkedin.com/in/timoerlemans" rel="me">
+    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
 </head>
 <body>
 <input checked="" class="color-switch-checkbox" id="switch" type="checkbox">
@@ -48,23 +43,23 @@
                 <h3 class="header__title">Tim Oerlemans</h3>
             </div>
         </div>
-         {% if navigation.items.length > 1 %}
-         <ul class="nav__list">
-         {% for item in navigation.items %}
-         <li class="nav__item">
-         {% if helpers.linkIsActiveLink(item.url, page.url) %}
-         <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
-         {% else %}
-         <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
-         href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-         >{{ item.text }}</a
-         >
-         {% endif %}
-         </li>
-         {% endfor %}
-         </ul>
+        {% if navigation.items.length > 1 %}
+            <ul class="nav__list">
+                {% for item in navigation.items %}
+                    <li class="nav__item">
+                        {% if helpers.linkIsActiveLink(item.url, page.url) %}
+                            <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
+                        {% else %}
+                            <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
+                               href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
+                            >{{ item.text }}</a
+                            >
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
 
-         {% endif %}
+        {% endif %}
     </header>
     <main class="wrapper">
         <div class="content">
