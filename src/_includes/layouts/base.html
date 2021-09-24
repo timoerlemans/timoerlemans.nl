@@ -6,9 +6,13 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
 
-    <title>{% block title %}Tim Oerlemans - front-end developer{% endblock %} {% if title %}- Tim Oerlemans{% endif %}</title>
+    <title>{{ title }} {% if title %}-{% endif %} Tim Oerlemans</title>
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
+
+    {% if canonical %}
+    <link rel="canonical" href="/blog/{{ canonical }}">
+    {% endif %}
 
     {# Add facility for pages to delare an array of critical styles #}
     {% if pageCriticalStyles %}
@@ -26,13 +30,18 @@
     <meta name="theme-color" content="#f10000">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
-    <link rel="canonical" href="https://www.timoerlemans.nl/{{ page.url }}">
-    <link rel="canonical" href="https://tim.oerlemans.dev/{{ page.url }}">
+    <link rel="canonical" href="https://www.timoerlemans.nl{{ page.url }}">
+    <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
+    {% if content.canonical %}
+        <link rel="canonical" href="/blog/{{ content.postDate }}/{{ content.title }}">
+    {% endif %}
     <link href="https://github.com/timoerlemans" rel="me">
     <link href="https://www.twitter.com/timoerlemans" rel="me">
     <link href="mailto:tim@oerlemans.dev" rel="me">
     <link href="https://www.linkedin.com/in/timoerlemans" rel="me">
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+    <link rel="webmention" href="https://webmention.io/tim.oerlemans.dev/webmention" />
+    <link rel="pingback" href="https://webmention.io/tim.oerlemans.dev/xmlrpc" />
 </head>
 <body>
 <input checked="" class="color-switch-checkbox" id="switch" type="checkbox">
