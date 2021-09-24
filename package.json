@@ -4,8 +4,8 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-    "production": "cross-env rm -rf ./dist/ && NODE_ENV=production npx gulp && cross-env NODE_ENV=production npx eleventy"
+    "start": "cross-env npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
+    "production": "cross-env NODE_ENV=production npx gulp && cross-env NODE_ENV=production npx eleventy"
   },
   "keywords": [],
   "author": "",
