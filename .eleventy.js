@@ -1,4 +1,5 @@
 const sortBlogPostsByDate = require('./src/_utils/sort-blogposts-by-date');
+const format = require('date-fns/format');
 
 module.exports = config => {
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -10,7 +11,11 @@ module.exports = config => {
     config.addWatchTarget('./src/assets/');
 
     config.addCollection('blog',
-            collection => sortBlogPostsByDate(collection));
+        collection => sortBlogPostsByDate(collection));
+
+    config.addFilter('date', function (date, dateFormat) {
+        return format(date, dateFormat)
+    })
 
     return {
         markdownTemplateEngine: 'njk',
