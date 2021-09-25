@@ -1,7 +1,8 @@
---------
+---
 eleventyExcludeFromCollections: true
-permalink: /robots.txt
---------
+permalink: '/robots.txt'
+---
+
 User-agent: *
 Allow: /
 Sitemap: {{ site.url }}/sitemap.xml
