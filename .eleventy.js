@@ -7,6 +7,7 @@ module.exports = config => {
 
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/assets/fonts/');
+    config.addPassthroughCopy('./src/assets/js/');
     config.addPassthroughCopy('./src/assets/img/');
     config.addWatchTarget('./src/assets/');
 
