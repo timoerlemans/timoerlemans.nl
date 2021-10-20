@@ -1,9 +1,9 @@
 {% extends "layouts/base.html" %}
 {% block content %}
-    <h1 class="blog-title">{{ title }}</h1>
+    <article> <h1 class="blog-title">{{ title }}</h1>
 
     <p class="text-small text-center">Written by: {{ author }} | Published on: {{ postDate }}</p>
-    <article>
+
         {{ content | safe }}
     </article>
 {% endblock %}
