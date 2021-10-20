@@ -1,8 +1,7 @@
 ---
 layout: 'layouts/page.html'
+title: 'Hi, my name is Tim Oerlemans.'
 ---
-
-## Hi, my name is Tim Oerlemans.
 
 I'm a front-end developer who lives and works in The Netherlands. I strongly believe that the web should
                 be
