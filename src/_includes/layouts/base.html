@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cloudfront.net *.cloudfront.net; form-action 'self'; font-src 'self' 'unsafe-inline' gstatic.com *.gstatic.com cloudfront.net *.cloudfront.net; manifest-src 'self'; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-inline' localhost cloudfront.net *.cloudfront.net">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' cloudfront.net *.cloudfront.net; form-action 'self'; font-src 'self' 'unsafe-inline' gstatic.com *.gstatic.com cloudfront.net *.cloudfront.net; manifest-src 'self'; style-src 'self' 'unsafe-inline' googleapis.com *.googleapis.com cloudfront.net *.cloudfront.net; script-src 'self' 'unsafe-inline' cloudfront.net *.cloudfront.net *.googleapis.com">
     <meta name="description" content="Tim Oerlemans' personal website and blog about front-end webdevelopment">
     <meta name="keywords" content="Tim Oerlemans, front-end, webdeveloper, webdevelopment, front-end webdevelopment, javascript, typescript, angular, react, blog, book reviews, bookrecs">
     <meta name="robots" content="index,follow">
@@ -27,8 +27,7 @@
             <style>{% include item %}</style>
         {% endfor %}
     {% endif %}
-    
-    <link rel="stylesheet" media="all" href="/css/fonts.css?{{ assetHash }}" />
+
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
         {% for item in pageStylesheets %}
@@ -43,7 +42,8 @@
     <link rel="authorization_endpoint" href="https://indieauth.com/auth">
     <link rel="webmention" href="https://webmention.io/tim.oerlemans.dev/webmention" />
     <link rel="pingback" href="https://webmention.io/tim.oerlemans.dev/xmlrpc" />
-    
+    <script src="/assets/js/main.js" defer></script>
+
 </head>
 <body>
 <input class="color-switch-checkbox" id="switch" type="checkbox">
@@ -95,6 +95,13 @@
         <span class="slider round"></span>
     </label>
 </div>
-<script src="/assets/js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script>
+    WebFont.load({
+        custom: {
+            urls: ['https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap']
+        }
+    });
+</script>
 </body>
 </html>
