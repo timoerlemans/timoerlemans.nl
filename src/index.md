@@ -13,4 +13,4 @@ Currently, I'm doing just that while working at [Van Spaendonck Development](htt
 
 In the past, I worked at [Handpicked Agencies](https://www.handpickedagencies.com/en) and [Truelime](https://www.truelime.nl/).
 
-If you want to connect with me, you can find me on [Twitter](https://www.twitter.com/timoerlemans), [LinkedIn](https://www.linkedin.com/in/timoerlemans/), [Github](https://www.github.com/timoerlemans/) or you can send me an old-fashioned e-mail (tim[at]oerlemans[dot]dev).
+If you want to connect with me, you can find me on [Mastodon](https://mastodon.social/@oerlemans), [LinkedIn](https://www.linkedin.com/in/timoerlemans/), [Github](https://www.github.com/timoerlemans/) or you can send me an old-fashioned e-mail (tim[at]oerlemans[dot]dev).
