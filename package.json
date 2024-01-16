@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "concurrently": "^6.3.0",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "date-fns": "latest",
     "eslint": "^8.0.1",
