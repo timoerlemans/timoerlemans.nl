@@ -19,7 +19,7 @@
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.0.0",
-    "modern-normalize": "^1.1.0",
+    "modern-normalize": "^2.0.0",
     "sass": "^1.43.2"
   }
 }
