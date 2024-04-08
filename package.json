@@ -15,7 +15,7 @@
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
     "date-fns": "latest",
-    "eslint": "^8.0.1",
+    "eslint": "^9.0.0",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.0.0",
