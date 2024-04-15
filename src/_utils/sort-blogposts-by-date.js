@@ -2,6 +2,6 @@ module.exports = (collection) => collection.getFilteredByGlob('./src/blog/*/**/*
         .sort((a, b) => {
             const aDate = new Date(a.date.postDate);
             const bDate = new Date(b.date.postDate);
-            return +bDate - +aDate;
+            return +aDate - +bDate;
         });
 
