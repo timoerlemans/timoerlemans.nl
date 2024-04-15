@@ -2,7 +2,7 @@
 title: 'The science of getting started'
 layout: 'layouts/blogpost.html'
 author: 'Tim Oerlemans'
-postDate: '2021-09-22'
+date: '2021-09-22'
 canonical: '2021-09-22/the-science-of-getting-started/'
 ---
 

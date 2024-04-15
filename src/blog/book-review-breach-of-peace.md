@@ -2,7 +2,7 @@
 title: 'Book review: Breach of Peace by Daniel B. Greene'
 layout: 'layouts/blogpost.html'
 author: 'Tim Oerlemans'
-postDate: '2021-09-23'
+date: '2021-09-23'
 canonical: '2021-09-23/book-review-breach-of-peace/'
 ---
 

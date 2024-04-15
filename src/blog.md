@@ -9,7 +9,7 @@ layout: layouts/page.html
 {%- if collections.blog.length > 0 -%}
 <h2>Blogposts</h2>
 <ul>
-{%- for post in collections.blog -%}
+{%- for post in collections.blog | reverse -%}
   <li><a href="{{ post.url }}">{{ post.data.title }}</a> ({{post.data.postDate}})</li>
 {%- endfor -%}
 </ul>
