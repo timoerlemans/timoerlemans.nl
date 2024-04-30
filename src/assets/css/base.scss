@@ -82,6 +82,7 @@ p {
 }
 
 a {
+  border: 1px solid transparent;
   color: var(--color-links);
   text-decoration: underline;
   font-weight: bold;
@@ -93,7 +94,7 @@ a {
   }
 
   &:active {
-    border: 1px solid var(--color-links);
+    border-color: var(--color-links);
   }
 }
 

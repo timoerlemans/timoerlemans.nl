@@ -21,5 +21,8 @@
     "gulp-sass": "^5.0.0",
     "modern-normalize": "^2.0.0",
     "sass": "^1.43.2"
+  },
+  "devDependencies": {
+    "markdown-it-attrs": "^4.1.6"
   }
 }
