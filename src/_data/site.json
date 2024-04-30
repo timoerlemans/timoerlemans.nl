@@ -1,4 +1,7 @@
 {
   "name": "Tim Oerlemans",
-  "url": "https://tim.oerlemans.dev"
+  "url": "https://tim.oerlemans.dev",
+  "authorName": "Tim Oerlemans",
+  "authorUrl": "https://tim.oerlemans.dev",
+  "description": "A personal blog by Tim Oerlemans about software development, books, learning and life."
 }
