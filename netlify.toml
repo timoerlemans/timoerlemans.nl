@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "https://timoerlemans.nl/*"
+  to = "https://tim.oerlemans.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://timoerlemans.nl/*"
+  to = "http://tim.oerlemans.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.timoerlemans.nl/*"
+  to = "https://tim.oerlemans.dev/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.timoerlemans.nl/*"
+  to = "http://tim.oerlemans.dev/:splat"
+  status = 301
+  force = true
