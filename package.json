@@ -12,14 +12,14 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.0",
     "cross-env": "^7.0.3",
     "date-fns": "latest",
     "eslint": "^9.0.0",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^5.0.0",
-    "modern-normalize": "^2.0.0",
+    "modern-normalize": "^3.0.1",
     "sass": "^1.43.2"
   },
   "devDependencies": {
