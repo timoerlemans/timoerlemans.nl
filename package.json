@@ -18,7 +18,7 @@
     "eslint": "^9.0.0",
     "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^6.0.0",
     "modern-normalize": "^3.0.1",
     "sass": "^1.43.2"
   },
