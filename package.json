@@ -13,7 +13,7 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "concurrently": "^9.0.0",
-    "cross-env": "^7.0.3",
+    "cross-env": "^10.0.0",
     "date-fns": "latest",
     "eslint": "^9.0.0",
     "gulp": "^5.0.0",
