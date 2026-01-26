@@ -1,7 +1,7 @@
 const sortBlogPostsByDate = require('./src/_utils/sort-blogposts-by-date');
 const format = require('date-fns/format');
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 
 
 module.exports = config => {
