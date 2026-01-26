@@ -4,8 +4,8 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "cross-env npx gulp && concurrently \"npx gulp watch\" \"npx eleventy --serve\"",
-    "production": "cross-env NODE_ENV=production npx gulp && cross-env NODE_ENV=production npx eleventy",
+    "start": "NODE_ENV=development npx eleventy --serve",
+    "production": "NODE_ENV=production npx eleventy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
@@ -18,15 +18,11 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@eslint/js": "^9.0.0",
-    "concurrently": "^9.0.0",
-    "cross-env": "^10.0.0",
+    "clean-css": "^5.3.3",
     "date-fns": "^4.1.0",
     "eslint": "^9.0.0",
-    "gulp": "^5.0.0",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-sass": "^6.0.0",
-    "modern-normalize": "^3.0.1",
     "markdown-it-attrs": "^4.1.6",
+    "modern-normalize": "^3.0.1",
     "sass": "^1.43.2"
   },
   "devDependencies": {}
