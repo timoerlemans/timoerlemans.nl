@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
     const switchBox = document.querySelector('#switch');
     const urlSearchParams = new URLSearchParams(window.location.search);
     let themeAlreadySet = false;
