@@ -7,7 +7,7 @@ postDate: '2024-04-30'
 
 Afgelopen vrijdag ging ik, samen met mijn jongste zoon Guus, mijn oudste zoon Jip ophalen bij de BSO. Ondanks dat het schoolvakantie was, waren er nog maar drie andere kinderen en één pedagogisch medewerker aanwezig.
 
-Een van de kinderen was een jongen van een jaar of negen. Toen ik Guus in zijn [rolstoelbuggy](https://www.etac.com/nl-nl/nederlands/Hulpmiddelen/kinderen-en-jongvolwassenen/zitten/r82-stingray/){target="_blank"} het lokaal binnenreed, keek die jongen al erg nieuwsgierig naar Guus. Na een tijdje stelde hij de vraag die mij in mijn hoofd al duizend keer is gesteld, maar nog nooit in het echt.
+Een van de kinderen was een jongen van een jaar of negen. Toen ik Guus in zijn [rolstoelbuggy](https://www.etac.com/nl-nl/nederlands/Hulpmiddelen/kinderen-en-jongvolwassenen/zitten/r82-stingray/){target="_blank" rel="noopener noreferrer"} het lokaal binnenreed, keek die jongen al erg nieuwsgierig naar Guus. Na een tijdje stelde hij de vraag die mij in mijn hoofd al duizend keer is gesteld, maar nog nooit in het echt.
 
 "Is het niet wat overdreven dat zo'n grote jongen nog in een kinderwagen zit?" vroeg hij. Het klonk wat brutaal, maar het was duidelijk nieuwsgierigheid die hem de vraag deed stellen. Hoewel ik dit gesprek al duizend keer in mijn hoofd had gevoerd, moest ik toch even nadenken over het antwoord, vooral omdat de vraag zo onverwacht kwam.
 
