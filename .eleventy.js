@@ -21,6 +21,8 @@ module.exports = config => {
         return format(date, dateFormat);
     });
 
+    // html: true is intentional - content is trusted (site owner only)
+    // Required for: Nunjucks templating in .md files and markdown-it-attrs plugin
     const mdOptions = {
         html: true,
         breaks: true,
