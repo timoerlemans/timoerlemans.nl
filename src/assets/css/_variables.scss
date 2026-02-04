@@ -1,5 +1,14 @@
 $breakpoint: 1024px !default;
 
+:root {
+  --spacing-xs: 10px;
+  --spacing-sm: 15px;
+  --spacing-md: 30px;
+  --spacing-lg: 45px;
+  --spacing-article-mobile: 1.5rem;
+  --spacing-article-desktop: 3rem;
+}
+
 .body {
   --color-background: #eaeaea;
   --color-highlight: #cd0000;

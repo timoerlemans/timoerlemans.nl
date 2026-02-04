@@ -2,7 +2,8 @@
   "name": "blog",
   "version": "1.0.0",
   "description": "",
-  "main": ".eleventy.js",
+  "type": "module",
+  "main": "eleventy.config.js",
   "scripts": {
     "start": "NODE_ENV=development npx eleventy --serve",
     "production": "NODE_ENV=production npx eleventy",

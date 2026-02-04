@@ -1,18 +1,13 @@
-const js = require('@eslint/js');
+import js from '@eslint/js';
 
-module.exports = [
+export default [
   js.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2020,
-      sourceType: 'commonjs',
+      sourceType: 'module',
       globals: {
-        require: 'readonly',
-        module: 'readonly',
-        exports: 'readonly',
         process: 'readonly',
-        __dirname: 'readonly',
-        __filename: 'readonly',
         document: 'readonly',
         window: 'readonly',
         URLSearchParams: 'readonly',

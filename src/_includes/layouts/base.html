@@ -17,14 +17,14 @@
     <meta name="theme-color" content="#f10000">
     {% if canonical %}
         <link rel="canonical" href="https://tim.oerlemans.dev/blog/{{ canonical }}">
-        {% else %}
-            <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
+    {% else %}
+        <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
     {% endif %}
     <title>{{ title }} {% if title %}-{% endif %} Tim Oerlemans</title>
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
 
-    {# Add facility for pages to delare an array of critical styles #}
+    {# Add facility for pages to declare an array of critical styles #}
     {% if pageCriticalStyles %}
         {% for item in pageCriticalStyles %}
             <style>{% include item %}</style>
@@ -55,7 +55,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
     <script src="/assets/js/main.js" defer></script>
-<script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e"></script>
+    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e"></script>
 </head>
 <body>
 <input class="color-switch-checkbox" id="switch" type="checkbox">
@@ -74,9 +74,7 @@
                             <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
                         {% else %}
                             <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
-                               href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}
-                            >{{ item.text }}</a
-                            >
+                               href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
                         {% endif %}
                     </li>
                 {% endfor %}
