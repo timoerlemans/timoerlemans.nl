@@ -1,11 +1,11 @@
-const sortBlogPostsByDate = require('./src/_utils/sort-blogposts-by-date');
-const format = require('date-fns/format');
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
-const sass = require('sass');
-const CleanCSS = require('clean-css');
-const path = require('path');
-const fs = require('fs');
+import sortBlogPostsByDate from './src/_utils/sort-blogposts-by-date.js';
+import { format } from 'date-fns';
+import markdownIt from 'markdown-it';
+import markdownItAttrs from 'markdown-it-attrs';
+import * as sass from 'sass';
+import CleanCSS from 'clean-css';
+import path from 'path';
+import fs from 'fs';
 
 // SCSS compilation helper
 const isProduction = process.env.NODE_ENV === 'production';
@@ -24,7 +24,7 @@ function compileSCSS(filename) {
     return css;
 }
 
-module.exports = config => {
+export default config => {
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
     config.setUseGitIgnore(false);
 
@@ -126,4 +126,3 @@ module.exports = config => {
         }
     };
 };
-
