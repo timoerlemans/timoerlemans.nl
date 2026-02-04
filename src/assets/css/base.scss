@@ -119,7 +119,6 @@ a {
   right: 0;
   bottom: 0;
   background-color: var(--color-highlight);
-  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -132,7 +131,6 @@ a {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   box-shadow: 0 0px 15px #2020203d;
   background: #fff url('/assets/img/sunny.png') no-repeat center;
@@ -147,8 +145,6 @@ a {
 }
 
 #switch:checked + .body .slider:before {
-  -webkit-transform: translateX(24px);
-  -ms-transform: translateX(24px);
   transform: translateX(24px);
   background: #000 url('/assets/img/night.png') no-repeat center;
 }
