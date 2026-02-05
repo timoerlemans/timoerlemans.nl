@@ -21,6 +21,7 @@ All notable changes to this project will be documented in this file.
 ### Accessibility
 - Add dynamic lang attribute for Dutch blog posts (#188)
 - Add accessible label and keyboard support to dark mode toggle (#187)
+- Add skip-to-content navigation link (#196)
 - Wrap navigation list in nav landmark element (#202)
 
 ### Changed
