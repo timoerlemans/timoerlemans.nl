@@ -11,6 +11,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Fix typo 'delare' to 'declare' in comment (#146)
+- Fix GitHub Actions workflows targeting 'master' instead of 'main' (#186)
 - Fix dark mode detection using .media instead of .matches (#184)
 
 ### Accessibility
