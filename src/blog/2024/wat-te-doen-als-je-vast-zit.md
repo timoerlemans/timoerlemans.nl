@@ -3,6 +3,7 @@ title: 'Wat te doen als je vast zit?'
 layout: 'layouts/blogpost.html'
 author: 'Tim Oerlemans'
 postDate: '2024-04-19'
+lang: 'nl'
 ---
 
 Iedereen zit wel eens vast. Of het nu gaat om alledaagse keuzes of grotere levensvragen:
