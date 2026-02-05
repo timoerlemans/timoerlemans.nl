@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Security
 - Add SRI hashes to external scripts (#150)
 - Replace WebFont loader with native CSS font-loading (#151)
+- Upgrade HTTP redirects to HTTPS in Netlify configuration (#182)
 
 ### Fixed
 - Fix typo 'delare' to 'declare' in comment (#146)
