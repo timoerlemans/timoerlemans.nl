@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Fix dark mode detection using .media instead of .matches (#184)
 
 ### Accessibility
+- Add dynamic lang attribute for Dutch blog posts (#188)
 - Add accessible label and keyboard support to dark mode toggle (#187)
 
 ### Changed
