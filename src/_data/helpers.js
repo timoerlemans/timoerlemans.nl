@@ -26,7 +26,7 @@ export default {
      *
      * @param {String} itemUrl The link in question
      * @param {String} pageUrl The page context
-     * @returns {String} A class or undefined
+     * @returns {String} Active CSS class or empty string
      */
     getLinkActiveClass(itemUrl, pageUrl) {
         if (itemUrl === pageUrl) {
@@ -43,7 +43,7 @@ export default {
      *
      * @param {String} itemUrl The link in question
      * @param {String} pageUrl The page context
-     * @returns {Boolean} A class or undefined
+     * @returns {Boolean} True if itemUrl matches pageUrl
      */
     linkIsActiveLink(itemUrl, pageUrl) {
         return (itemUrl === pageUrl);
