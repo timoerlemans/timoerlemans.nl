@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Security
 - Add SRI hashes to external scripts (#150)
 - Replace WebFont loader with native CSS font-loading (#151)
+- Add SRI hash to Umami analytics external script (#181)
 
 ### Fixed
 - Fix typo 'delare' to 'declare' in comment (#146)
