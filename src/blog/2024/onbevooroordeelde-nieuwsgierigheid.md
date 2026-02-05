@@ -3,6 +3,7 @@ title: 'Onbevooroordeelde nieuwsgierigheid'
 layout: 'layouts/blogpost.html'
 author: 'Tim Oerlemans'
 postDate: '2024-04-30'
+lang: 'nl'
 ---
 
 Afgelopen vrijdag ging ik, samen met mijn jongste zoon Guus, mijn oudste zoon Jip ophalen bij de BSO. Ondanks dat het schoolvakantie was, waren er nog maar drie andere kinderen en één pedagogisch medewerker aanwezig.
