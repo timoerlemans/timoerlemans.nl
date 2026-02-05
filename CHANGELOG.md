@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 - Remove duplicate blog posts at root level of blog directory (#185)
 - Fix GitHub Actions workflows targeting 'master' instead of 'main' (#186)
 - Fix dark mode detection using .media instead of .matches (#184)
+- Fix page title showing dangling dash when title is empty (#199)
 
 ### Accessibility
 - Add dynamic lang attribute for Dutch blog posts (#188)
