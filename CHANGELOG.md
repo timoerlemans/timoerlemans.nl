@@ -22,6 +22,7 @@ All notable changes to this project will be documented in this file.
 - Add dynamic lang attribute for Dutch blog posts (#188)
 - Add accessible label and keyboard support to dark mode toggle (#187)
 - Wrap navigation list in nav landmark element (#202)
+- Improve dark mode link color contrast to meet WCAG AA (#206)
 
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
