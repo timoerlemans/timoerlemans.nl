@@ -14,7 +14,7 @@ const cssDir = './src/assets/css';
 function compileSCSS(filename) {
     const inputPath = path.join(cssDir, `${filename}.scss`);
     const result = sass.compile(inputPath, {
-        loadPaths: [cssDir]
+        loadPaths: [cssDir, 'node_modules']
     });
 
     let css = result.css;

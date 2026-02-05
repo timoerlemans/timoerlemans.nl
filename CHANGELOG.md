@@ -28,6 +28,9 @@ All notable changes to this project will be documented in this file.
 - Improve dark mode link color contrast to meet WCAG AA (#206)
 - Convert CSS spacing from pixel values to rem units (#201)
 
+### Tech Debt
+- Replace copy-pasted modern-normalize v1.1.0 with npm import v3.0.1 (#191)
+
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
 - Improve HTML template formatting (#144)
