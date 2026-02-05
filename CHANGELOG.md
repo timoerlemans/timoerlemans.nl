@@ -13,6 +13,9 @@ All notable changes to this project will be documented in this file.
 - Fix typo 'delare' to 'declare' in comment (#146)
 - Fix dark mode detection using .media instead of .matches (#184)
 
+### Accessibility
+- Add accessible label and keyboard support to dark mode toggle (#187)
+
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
 - Improve HTML template formatting (#144)
