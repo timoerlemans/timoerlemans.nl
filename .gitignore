@@ -1,3 +1,7 @@
+# Lockfiles (using pnpm - prevent npm/yarn lockfile conflicts)
+package-lock.json
+yarn.lock
+
 # Logs
 logs
 *.log
@@ -106,6 +110,9 @@ dist
 # IDEs
 .idea/
 .vscode/
+
+# Claude Code MCP config (may contain tokens)
+.mcp.json
 
 # Other
 *.scssc
