@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 - Fix typo 'delare' to 'declare' in comment (#146)
 - Fix GitHub Actions workflows targeting 'master' instead of 'main' (#186)
 - Fix dark mode detection using .media instead of .matches (#184)
+- Fix blog listing showing raw date strings instead of formatted dates (#205)
 
 ### Accessibility
 - Add dynamic lang attribute for Dutch blog posts (#188)
