@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% block content %}
     <article>
-        <p class="text-small text-center">Written by: <strong>{{ author }}</strong> | Published on: <strong>{{ postDate }}</strong></p>
+        <p class="text-small text-center">Written by: <strong>{{ author }}</strong> | Published on: <strong><time datetime="{{ postDate | date('yyyy-MM-dd') }}" title="{{ postDate | date('yyyy-MM-dd') }}">{{ postDate | date('d MMMM yyyy') }}</time></strong></p>
 
         <h1 class="blog-title">{{ title }}</h1>
 
