@@ -34,6 +34,9 @@ All notable changes to this project will be documented in this file.
 ### Testing
 - Add test suite with vitest for helpers, global, and sort utilities (#197)
 
+### Enhanced
+- Show human-readable localized dates with exact date on hover (#230)
+
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
 - Improve HTML template formatting (#144)

@@ -1,5 +1,7 @@
 import sortBlogPostsByDate from './src/_utils/sort-blogposts-by-date.js';
 import { format } from 'date-fns';
+import { nl } from 'date-fns/locale/nl';
+import { enUS } from 'date-fns/locale/en-US';
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
 import * as sass from 'sass';
@@ -37,8 +39,10 @@ export default config => {
     config.addCollection('blog',
         collection => sortBlogPostsByDate(collection));
 
-    config.addFilter('date', function (date, dateFormat) {
-        return format(date, dateFormat);
+    const localeMap = { nl, en: enUS };
+    config.addFilter('date', function (date, dateFormat, lang) {
+        const locale = localeMap[lang];
+        return format(date, dateFormat, locale ? { locale } : undefined);
     });
 
     // html: true is intentional - content is trusted (site owner only)

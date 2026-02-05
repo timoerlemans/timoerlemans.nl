@@ -12,6 +12,8 @@ export default [
         window: 'readonly',
         localStorage: 'readonly',
         URLSearchParams: 'readonly',
+        navigator: 'readonly',
+        Intl: 'readonly',
       }
     },
     rules: {
