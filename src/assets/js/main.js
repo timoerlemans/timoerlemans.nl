@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').media && !themeAlreadySet) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches && !themeAlreadySet) {
         switchBox.setAttribute('checked', '');
     }
 
