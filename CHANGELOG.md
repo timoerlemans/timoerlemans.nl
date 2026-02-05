@@ -10,6 +10,7 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Fix typo 'delare' to 'declare' in comment (#146)
+- Remove duplicate blog posts at root level of blog directory (#185)
 
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
