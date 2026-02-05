@@ -15,6 +15,7 @@ All notable changes to this project will be documented in this file.
 
 ### Accessibility
 - Add accessible label and keyboard support to dark mode toggle (#187)
+- Add skip-to-content navigation link (#196)
 
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
