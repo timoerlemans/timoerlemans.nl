@@ -31,6 +31,9 @@ All notable changes to this project will be documented in this file.
 ### Tech Debt
 - Replace copy-pasted modern-normalize v1.1.0 with npm import v3.0.1 (#191)
 
+### Testing
+- Add test suite with vitest for helpers, global, and sort utilities (#197)
+
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
 - Improve HTML template formatting (#144)
