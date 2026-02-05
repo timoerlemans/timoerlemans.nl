@@ -35,3 +35,4 @@ All notable changes to this project will be documented in this file.
 - Remove unnecessary vendor prefixes (#156)
 - Add CSS spacing custom properties (#158)
 - Fix incorrect JSDoc @returns descriptions in helpers.js (#200)
+- Persist dark mode preference in localStorage (#195)
