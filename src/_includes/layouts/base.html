@@ -1,11 +1,11 @@
 {% set assetHash = global.random() %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or 'en' }}">
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' eu.umami.is; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self' eu.umami.is; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' eu.umami.is; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self' eu.umami.is; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
     <meta name="author" content="{{ site.authorName }}">
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="Tim Oerlemans, front-end, webdeveloper, webdevelopment, front-end webdevelopment, javascript, typescript, angular, react, blog, book reviews, bookrecs, life, adhd, fantasy, science fiction, learning, writing">
@@ -67,19 +67,20 @@
             </div>
         </div>
         {% if navigation.items.length > 1 %}
-            <ul class="nav__list">
-                {% for item in navigation.items %}
-                    <li class="nav__item">
-                        {% if helpers.linkIsActiveLink(item.url, page.url) %}
-                            <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
-                        {% else %}
-                            <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
-                               href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-
+            <nav aria-label="Main navigation">
+                <ul class="nav__list">
+                    {% for item in navigation.items %}
+                        <li class="nav__item">
+                            {% if helpers.linkIsActiveLink(item.url, page.url) %}
+                                <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
+                            {% else %}
+                                <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
+                                   href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         {% endif %}
     </header>
     <main class="wrapper">
@@ -102,6 +103,7 @@
         </div>
     </main>
     <label class="color-switch" for="switch">
+        <span class="sr-only">Toggle dark mode</span>
         <span class="slider round"></span>
     </label>
 </div>

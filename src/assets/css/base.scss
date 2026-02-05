@@ -98,8 +98,28 @@ a {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .color-switch-checkbox {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .color-switch {
@@ -141,7 +161,8 @@ a {
 }
 
 #switch:focus + .body .slider {
-  box-shadow: 0 0 1px #2196f3;
+  box-shadow: 0 0 0 3px #2196f3;
+  outline: 2px solid transparent;
 }
 
 #switch:checked + .body .slider::before {
