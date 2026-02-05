@@ -37,3 +37,4 @@ All notable changes to this project will be documented in this file.
 - Remove unused Muli font declaration and font file (#190)
 - Fix incorrect JSDoc @returns descriptions in helpers.js (#200)
 - Persist dark mode preference in localStorage (#195)
+- Remove empty blogposts.json data file (#193)
