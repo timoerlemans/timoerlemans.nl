@@ -25,6 +25,9 @@ All notable changes to this project will be documented in this file.
 - Add skip-to-content navigation link (#196)
 - Wrap navigation list in nav landmark element (#202)
 
+### Tech Debt
+- Replace copy-pasted modern-normalize v1.1.0 with npm import v3.0.1 (#191)
+
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)
 - Improve HTML template formatting (#144)
