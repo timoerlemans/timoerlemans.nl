@@ -1,5 +1,21 @@
 @import 'variables';
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: var(--color-background, #eaeaea);
+  color: var(--color-text, #333);
+  text-decoration: none;
+  font-weight: bold;
+
+  &:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+  }
+}
 
 body {
   font-family: 'Roboto Slab', sans-serif;

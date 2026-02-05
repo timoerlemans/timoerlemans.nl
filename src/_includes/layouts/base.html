@@ -20,7 +20,7 @@
     {% else %}
         <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
     {% endif %}
-    <title>{{ title }} {% if title %}-{% endif %} Tim Oerlemans</title>
+    <title>{%- if title %}{{ title }} - {% endif -%}Tim Oerlemans</title>
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
 
@@ -55,9 +55,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
     <script src="/assets/js/main.js" defer></script>
-    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e"></script>
+    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous"></script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Skip to content</a>
 <input class="color-switch-checkbox" id="switch" type="checkbox">
 <div class="body">
     <header class="header">
@@ -83,7 +84,7 @@
             </nav>
         {% endif %}
     </header>
-    <main class="wrapper">
+    <main class="wrapper" id="main-content">
         <div class="content">
             {% block content %}
                 <h2>Hi, my name is Tim Oerlemans.</h2>
