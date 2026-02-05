@@ -38,3 +38,4 @@ All notable changes to this project will be documented in this file.
 - Fix incorrect JSDoc @returns descriptions in helpers.js (#200)
 - Persist dark mode preference in localStorage (#195)
 - Remove empty blogposts.json data file (#193)
+- Move ESLint packages from dependencies to devDependencies (#198)
