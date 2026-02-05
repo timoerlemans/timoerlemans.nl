@@ -10,7 +10,7 @@ layout: layouts/page.html
 <h2>Blogposts</h2>
 <ul>
 {%- for post in collections.blog | reverse -%}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a> (<time datetime="{{ post.data.postDate | date('yyyy-MM-dd') }}" title="{{ post.data.postDate | date('yyyy-MM-dd') }}">{{ post.data.postDate | date('d MMMM yyyy', post.data.lang) }}</time>)</li>
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a> (<time datetime="{{ post.data.postDate | date('yyyy-MM-dd') }}">{{ post.data.postDate | date('d MMMM yyyy', post.data.lang) }}</time>)</li>
 {%- endfor -%}
 </ul>
 {%- else -%}
