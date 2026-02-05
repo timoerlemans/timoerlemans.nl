@@ -1,10 +1,15 @@
-$breakpoint: 1024px !default;
+$breakpoint-phone: 480px !default;
+$breakpoint-tablet: 768px !default;
+$breakpoint-laptop: 1024px !default;
+$breakpoint-desktop: 1920px !default;
+$breakpoint-4k: 2560px !default;
+$breakpoint-ultrawide: 3440px !default;
 
 :root {
-  --spacing-xs: 10px;
-  --spacing-sm: 15px;
-  --spacing-md: 30px;
-  --spacing-lg: 45px;
+  --spacing-xs: 0.625rem;
+  --spacing-sm: 0.9375rem;
+  --spacing-md: 1.875rem;
+  --spacing-lg: 2.8125rem;
   --spacing-article-mobile: 1.5rem;
   --spacing-article-desktop: 3rem;
 }
