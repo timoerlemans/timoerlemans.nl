@@ -1,6 +1,6 @@
 {% set assetHash = global.random() %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang or 'en' }}">
 
 <head>
     <meta charset="UTF-8">
@@ -55,7 +55,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
     <script src="/assets/js/main.js" defer></script>
-    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e"></script>
+    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous"></script>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
@@ -68,19 +68,20 @@
             </div>
         </div>
         {% if navigation.items.length > 1 %}
-            <ul class="nav__list">
-                {% for item in navigation.items %}
-                    <li class="nav__item">
-                        {% if helpers.linkIsActiveLink(item.url, page.url) %}
-                            <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
-                        {% else %}
-                            <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
-                               href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-
+            <nav aria-label="Main navigation">
+                <ul class="nav__list">
+                    {% for item in navigation.items %}
+                        <li class="nav__item">
+                            {% if helpers.linkIsActiveLink(item.url, page.url) %}
+                                <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
+                            {% else %}
+                                <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
+                                   href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
         {% endif %}
     </header>
     <main class="wrapper" id="main-content">
