@@ -10,6 +10,7 @@ export default [
         process: 'readonly',
         document: 'readonly',
         window: 'readonly',
+        localStorage: 'readonly',
         URLSearchParams: 'readonly',
       }
     },
