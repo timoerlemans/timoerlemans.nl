@@ -34,4 +34,5 @@ All notable changes to this project will be documented in this file.
 - Migrate from CommonJS to ES modules (#155)
 - Remove unnecessary vendor prefixes (#156)
 - Add CSS spacing custom properties (#158)
+- Remove unused Muli font declaration and font file (#190)
 - Fix incorrect JSDoc @returns descriptions in helpers.js (#200)
