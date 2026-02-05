@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 ### Security
 - Add SRI hashes to external scripts (#150)
 - Replace WebFont loader with native CSS font-loading (#151)
+- Upgrade HTTP redirects to HTTPS in Netlify configuration (#182)
 - Remove 'unsafe-inline' from CSP script-src directive (#180)
 
 ### Fixed
