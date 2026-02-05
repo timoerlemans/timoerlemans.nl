@@ -20,7 +20,7 @@
     {% else %}
         <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
     {% endif %}
-    <title>{{ title }} {% if title %}-{% endif %} Tim Oerlemans</title>
+    <title>{%- if title %}{{ title }} - {% endif -%}Tim Oerlemans</title>
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
 
