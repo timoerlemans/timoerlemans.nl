@@ -26,6 +26,7 @@ All notable changes to this project will be documented in this file.
 - Add skip-to-content navigation link (#196)
 - Wrap navigation list in nav landmark element (#202)
 - Improve dark mode link color contrast to meet WCAG AA (#206)
+- Convert CSS spacing from pixel values to rem units (#201)
 
 ### Changed
 - Use modern ::before/::after pseudo-element syntax (#143)

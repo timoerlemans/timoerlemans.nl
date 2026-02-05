@@ -1,10 +1,10 @@
-$breakpoint: 1024px !default;
+$breakpoint: 64em !default;
 
 :root {
-  --spacing-xs: 10px;
-  --spacing-sm: 15px;
-  --spacing-md: 30px;
-  --spacing-lg: 45px;
+  --spacing-xs: 0.625rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
   --spacing-article-mobile: 1.5rem;
   --spacing-article-desktop: 3rem;
 }
