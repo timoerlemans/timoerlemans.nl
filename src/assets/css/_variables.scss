@@ -23,6 +23,10 @@ $breakpoint-ultrawide: 3440px !default;
   --color-heading: #000;
   --color-highlight-text: #fff;
   --color-links: #cd0000;
+  --color-slider-knob: #fff;
+  --color-slider-shadow: #2020203d;
+  --color-slider-focus: #2196f3;
+  --color-slider-track: #cd0000;
   min-height: 100vh;
 }
 
@@ -33,4 +37,6 @@ $breakpoint-ultrawide: 3440px !default;
   --color-nav-background: #eaeaea;
   --color-links: #ff9a9a;
   --color-nav-links: #cd0000;
+  --color-slider-track: #ccc;
+  --color-slider-knob: #000;
 }
