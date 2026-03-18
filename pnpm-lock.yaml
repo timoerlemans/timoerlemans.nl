@@ -25,7 +25,7 @@ importers:
         version: 3.0.1
       sass:
         specifier: ^1.43.2
-        version: 1.97.3
+        version: 1.98.0
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -35,7 +35,7 @@ importers:
         version: 10.0.3
       vitest:
         specifier: ^4.0.18
-        version: 4.1.0(vite@7.3.1(sass@1.97.3))
+        version: 4.1.0(vite@7.3.1(sass@1.98.0))
 
 packages:
 
@@ -931,8 +931,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  immutable@5.1.4:
-    resolution: {integrity: sha512-p6u1bG3YSnINT5RQmx/yRZBpenIl30kVxkTLDyHLIMk0gict704Q9n+thfDI7lTRm9vXdDYutVzXhzcThxTnXA==}
+  immutable@5.1.5:
+    resolution: {integrity: sha512-t7xcm2siw+hlUM68I+UEOK+z84RzmN59as9DZ7P1l0994DKUWV7UXBMQZVxaoMSRQ+PBZbHCOoBt7a2wxOMt+A==}
 
   imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
@@ -1231,8 +1231,8 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
-  sass@1.97.3:
-    resolution: {integrity: sha512-fDz1zJpd5GycprAbu4Q2PV/RprsRtKC/0z82z0JLgdytmcq0+ujJbJ/09bPGDxCLkKY3Np5cRAOcWiVkLXJURg==}
+  sass@1.98.0:
+    resolution: {integrity: sha512-+4N/u9dZ4PrgzGgPlKnaaRQx64RO0JBKs9sDhQ2pLgN6JQZ25uPQZKQYaBJU48Kd5BxgXoJ4e09Dq7nMcOUW3A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -1841,13 +1841,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.0(vite@7.3.1(sass@1.97.3))':
+  '@vitest/mocker@4.1.0(vite@7.3.1(sass@1.98.0))':
     dependencies:
       '@vitest/spy': 4.1.0
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.1(sass@1.97.3)
+      vite: 7.3.1(sass@1.98.0)
 
   '@vitest/pretty-format@4.1.0':
     dependencies:
@@ -2242,7 +2242,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  immutable@5.1.4: {}
+  immutable@5.1.5: {}
 
   imurmurhash@0.1.4: {}
 
@@ -2515,10 +2515,10 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.59.0
       fsevents: 2.3.3
 
-  sass@1.97.3:
+  sass@1.98.0:
     dependencies:
       chokidar: 4.0.3
-      immutable: 5.1.4
+      immutable: 5.1.5
       source-map-js: 1.2.1
     optionalDependencies:
       '@parcel/watcher': 2.5.6
@@ -2611,7 +2611,7 @@ snapshots:
 
   urlpattern-polyfill@10.1.0: {}
 
-  vite@7.3.1(sass@1.97.3):
+  vite@7.3.1(sass@1.98.0):
     dependencies:
       esbuild: 0.27.4
       fdir: 6.5.0(picomatch@4.0.3)
@@ -2621,12 +2621,12 @@ snapshots:
       tinyglobby: 0.2.15
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.97.3
+      sass: 1.98.0
 
-  vitest@4.1.0(vite@7.3.1(sass@1.97.3)):
+  vitest@4.1.0(vite@7.3.1(sass@1.98.0)):
     dependencies:
       '@vitest/expect': 4.1.0
-      '@vitest/mocker': 4.1.0(vite@7.3.1(sass@1.97.3))
+      '@vitest/mocker': 4.1.0(vite@7.3.1(sass@1.98.0))
       '@vitest/pretty-format': 4.1.0
       '@vitest/runner': 4.1.0
       '@vitest/snapshot': 4.1.0
@@ -2643,7 +2643,7 @@ snapshots:
       tinyexec: 1.0.4
       tinyglobby: 0.2.15
       tinyrainbow: 3.1.0
-      vite: 7.3.1(sass@1.97.3)
+      vite: 7.3.1(sass@1.98.0)
       why-is-node-running: 2.3.0
     transitivePeerDependencies:
       - msw
