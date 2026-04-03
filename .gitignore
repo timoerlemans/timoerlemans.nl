@@ -117,6 +117,9 @@ dist
 # Superpowers brainstorm sessies
 .superpowers/
 
+# Git worktrees
+.worktrees/
+
 # Other
 *.scssc
 *.swp
