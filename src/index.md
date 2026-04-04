@@ -11,8 +11,8 @@ description: 'Persoonlijke website van Tim Oerlemans — software, boeken en wat
 <a class="substack-cta" href="https://oerlemans.substack.com" rel="noopener noreferrer" target="_blank">Abonneer op Substack →</a>
 
 {% if substack.length > 0 %}
-<section class="posts-section">
-  <p class="section-label">Recente posts</p>
+<section class="posts-section" aria-labelledby="recent-posts">
+  <h2 class="section-label" id="recent-posts">Recente posts</h2>
   {% for post in substack | first(5) %}
   <div class="post-item">
     <a class="post-item__title" href="{{ post.url }}" rel="noopener noreferrer" target="_blank">{{ post.title }}</a>

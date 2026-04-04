@@ -159,6 +159,11 @@ a {
   margin: 1.5rem 0;
 }
 
+.rule--centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .hero__tagline {
   font-family: var(--font-display);
   font-size: 3.5rem;
@@ -207,6 +212,13 @@ a {
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-bottom: var(--spacing-sm);
+}
+
+h2.section-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 0;
 }
 
 .post-item {

@@ -1,6 +1,6 @@
 ---
 title: Blog
-layout: layouts/page.html
+layout: 'layouts/page.html'
 description: 'Alle posts van Tim Oerlemans op Substack — software, boeken en wat er tussendoor gebeurt.'
 ---
 
