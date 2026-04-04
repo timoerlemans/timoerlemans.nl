@@ -1,4 +1,3 @@
-import sortBlogPostsByDate from './src/_utils/sort-blogposts-by-date.js';
 import { format } from 'date-fns';
 import { nl } from 'date-fns/locale/nl';
 import { enUS } from 'date-fns/locale/en-US';
@@ -30,14 +29,14 @@ export default config => {
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
     config.setUseGitIgnore(false);
 
+    // Ignore test files to prevent Vitest conflicts
+    config.ignores.add('src/**/*.test.js');
+
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/assets/fonts/');
     config.addPassthroughCopy('./src/assets/js/');
     config.addPassthroughCopy('./src/assets/img/');
     config.addWatchTarget('./src/assets/css/');
-
-    config.addCollection('blog',
-        collection => sortBlogPostsByDate(collection));
 
     const localeMap = { nl, en: enUS };
     config.addFilter('date', function (date, dateFormat, lang) {
