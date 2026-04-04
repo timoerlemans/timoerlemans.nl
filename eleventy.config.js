@@ -43,6 +43,7 @@ export default config => {
         const locale = localeMap[lang];
         return format(date, dateFormat, locale ? { locale } : undefined);
     });
+    config.addFilter('first', (arr, n) => arr.slice(0, n));
 
     // html: true is intentional - content is trusted (site owner only)
     // Required for: Nunjucks templating in .md files and markdown-it-attrs plugin
