@@ -32,6 +32,10 @@ export default config => {
     // Ignore test files to prevent Vitest conflicts
     config.ignores.add('src/**/*.test.js');
 
+    // Prevent infinite rebuild loop: eleventy.before writes compiled CSS to
+    // src/_includes/css/, which would otherwise trigger another build
+    config.watchIgnores.add('src/_includes/css/**');
+
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/assets/fonts/');
     config.addPassthroughCopy('./src/assets/js/');
