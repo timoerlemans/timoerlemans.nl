@@ -1,5 +1,8 @@
 name: Daily Netlify build
 
+permissions:
+  contents: read
+
 on:
   schedule:
     - cron: '0 6 * * *'  # elke dag om 06:00 UTC
