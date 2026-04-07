@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { parseSubstackFeed } from '../src/_data/substack.js';
+import { parseSubstackFeed } from './substack.js';
 
 describe('parseSubstackFeed', () => {
   it('geeft een lege array terug als de feed leeg is', () => {
