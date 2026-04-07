@@ -22,12 +22,16 @@
     "@11ty/eleventy": "^3.0.0",
     "clean-css": "^5.3.3",
     "date-fns": "^4.1.0",
+    "markdown-it": "^14.1.1",
     "markdown-it-attrs": "^4.1.6",
     "modern-normalize": "^3.0.1",
+    "rss-parser": "^3.13.0",
     "sass": "^1.43.2"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@fontsource/playfair-display": "^5.2.8",
+    "@fontsource/roboto-slab": "^5.2.8",
     "eslint": "^10.0.0",
     "vitest": "^4.0.18"
   }

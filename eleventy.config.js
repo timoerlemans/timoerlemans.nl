@@ -1,4 +1,3 @@
-import sortBlogPostsByDate from './src/_utils/sort-blogposts-by-date.js';
 import { format } from 'date-fns';
 import { nl } from 'date-fns/locale/nl';
 import { enUS } from 'date-fns/locale/en-US';
@@ -30,20 +29,25 @@ export default config => {
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
     config.setUseGitIgnore(false);
 
+    // Ignore test files to prevent Vitest conflicts
+    config.ignores.add('src/**/*.test.js');
+
+    // Prevent infinite rebuild loop: eleventy.before writes compiled CSS to
+    // src/_includes/css/, which would otherwise trigger another build
+    config.watchIgnores.add('src/_includes/css/**');
+
     // Set directories to pass through to the dist folder
     config.addPassthroughCopy('./src/assets/fonts/');
     config.addPassthroughCopy('./src/assets/js/');
     config.addPassthroughCopy('./src/assets/img/');
     config.addWatchTarget('./src/assets/css/');
 
-    config.addCollection('blog',
-        collection => sortBlogPostsByDate(collection));
-
     const localeMap = { nl, en: enUS };
     config.addFilter('date', function (date, dateFormat, lang) {
         const locale = localeMap[lang];
         return format(date, dateFormat, locale ? { locale } : undefined);
     });
+    config.addFilter('first', (arr, n) => Array.isArray(arr) ? arr.slice(0, n) : []);
 
     // html: true is intentional - content is trusted (site owner only)
     // Required for: Nunjucks templating in .md files and markdown-it-attrs plugin

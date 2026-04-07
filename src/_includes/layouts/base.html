@@ -1,37 +1,36 @@
 {% set assetHash = global.random() %}
 <!DOCTYPE html>
-<html lang="{{ lang or 'en' }}">
+<html lang="{{ lang or 'nl' }}">
 
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' eu.umami.is; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data:; connect-src 'self' eu.umami.is; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cloud.umami.is; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloud.umami.is https://api-gateway.umami.dev; form-action 'self' oerlemans.substack.com; frame-src oerlemans.substack.com; upgrade-insecure-requests">
     <meta name="author" content="{{ site.authorName }}">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="keywords" content="Tim Oerlemans, front-end, webdeveloper, webdevelopment, front-end webdevelopment, javascript, typescript, angular, react, blog, book reviews, bookrecs, life, adhd, fantasy, science fiction, learning, writing">
+    <meta name="description" content="{{ description or site.description }}">
     <meta name="robots" content="index,follow">
-    <meta name="googlebot" content="index,follow">
+    <meta name="theme-color" content="#1e1e1e">
     <meta name="google-site-verification" content="jMjTF6OAleBAVNBHENj6eyCnpvWA4HBrJboL76VFXQc" />
     <meta name="google-site-verification" content="bT8IJSWDUWGQmUBZi1HVmfslbUSOFVOIGfmag0CHrBk" />
-    
-    <meta name="theme-color" content="#f10000">
+
     {% if canonical %}
         <link rel="canonical" href="https://tim.oerlemans.dev/blog/{{ canonical }}">
     {% else %}
         <link rel="canonical" href="https://tim.oerlemans.dev{{ page.url }}">
     {% endif %}
+
     <title>{%- if title %}{{ title }} - {% endif -%}Tim Oerlemans</title>
+
+    <link rel="stylesheet" href="/css/fonts.css?{{ assetHash }}">
     <style>{% include "css/critical.css" %}</style>
     <style>{% include "css/base.css" %}</style>
 
-    {# Add facility for pages to declare an array of critical styles #}
     {% if pageCriticalStyles %}
         {% for item in pageCriticalStyles %}
             <style>{% include item %}</style>
         {% endfor %}
     {% endif %}
 
-    {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
         {% for item in pageStylesheets %}
             <link rel="stylesheet" media="all" href="{{ item }}?{{ assetHash }}" />
@@ -42,71 +41,40 @@
     <link href="https://mastodon.social/@oerlemans" rel="me">
     <link href="mailto:tim@oerlemans.dev" rel="me">
     <link href="https://www.linkedin.com/in/timoerlemans" rel="me">
-    <link href="https://www.threads.net/@oerlemanstim" rel="me">
-    <link href="https://www.instagram.com/oerlemanstim/" rel="me">
-    <link href="https://www.last.fm/user/TimOerlemans" rel="me">
-    <link href="https://steamcommunity.com/id/timoerlemans/" rel="me">
     <link href="https://oerlemans.substack.com" rel="me">
     <link href="https://bsky.app/profile/groenoranjerood.bsky.social" rel="me">
-    <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-    <link rel="webmention" href="https://webmention.io/tim.oerlemans.dev/webmention" />
-    <link rel="pingback" href="https://webmention.io/tim.oerlemans.dev/xmlrpc" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap">
+
     <script src="/assets/js/main.js" defer></script>
-    <script defer src="https://eu.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous"></script>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="6b5a5a34-b2f6-4e32-b181-fab14b35f53e" integrity="sha384-yRsxKUe1uwvKWyAzDiU58FsIbO8orQJUzy1kPcDQAfAuaczzL5MxTlI4K/AABHhq" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <a href="#main-content" class="skip-link">Skip to content</a>
-<input class="color-switch-checkbox" id="switch" type="checkbox">
-<div class="body">
-    <header class="header">
-        <div class="logo">
-            <div class="title">
-                <h3 class="header__title">Tim Oerlemans</h3>
-            </div>
-        </div>
-        {% if navigation.items.length > 1 %}
-            <nav aria-label="Main navigation">
-                <ul class="nav__list">
-                    {% for item in navigation.items %}
-                        <li class="nav__item">
-                            {% if helpers.linkIsActiveLink(item.url, page.url) %}
-                                <span class="{{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"> {{ item.text }}</span>
-                            {% else %}
-                                <a class="nav__link {{ helpers.getLinkActiveClass(item.url, page.url) | safe }}"
-                                   href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        {% endif %}
-    </header>
-    <main class="wrapper" id="main-content">
-        <div class="content">
-            {% block content %}
-                <h2>Hi, my name is Tim Oerlemans.</h2>
-                <p>I'm a front-end developer who lives and works in The Netherlands. I strongly believe that the web
-                    should
-                    be
-                    for everyone, and therefore I'm trying to make it as accessible and user-friendly as possible.
-                </p>
-                <p>Currently, I'm doing just that while working at <a href="https://www.vanspaendonck.nl/"
-                                                                      rel="noopener noreferrer"
-                                                                      target="_blank">Van Spaendonck Development</a> in
-                    Tilburg, where I work on products like <a href="https://www.loket.nl/" rel="noopener noreferrer"
-                                                              target="_blank">Loket</a>
-                    and <a href="https://mijn.loket.nl/" rel="noopener noreferrer" target="_blank">MijnLoket</a>.
-                </p>
-            {% endblock %}
-        </div>
-    </main>
-    <label class="color-switch" for="switch">
-        <span class="sr-only">Toggle dark mode</span>
-        <span class="slider round"></span>
-    </label>
-</div>
+
+<header class="header">
+    <a href="/" class="header__site-name">Tim Oerlemans</a>
+    {% if navigation.items.length > 1 %}
+        <nav aria-label="Main navigation">
+            <ul class="nav__list">
+                {% for item in navigation.items %}
+                    <li class="nav__item">
+                        {% if helpers.linkIsActiveLink(item.url, page.url) %}
+                            <span class="nav__link nav__link--active" aria-current="page">{{ item.text }}</span>
+                        {% else %}
+                            <a class="nav__link" href="{{ item.url }}">{{ item.text }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+</header>
+
+<main class="wrapper" id="main-content">
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+
 </body>
 </html>

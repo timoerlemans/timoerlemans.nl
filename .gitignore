@@ -114,6 +114,12 @@ dist
 # Claude Code MCP config (may contain tokens)
 .mcp.json
 
+# Superpowers brainstorm sessies
+.superpowers/
+
+# Git worktrees
+.worktrees/
+
 # Other
 *.scssc
 *.swp

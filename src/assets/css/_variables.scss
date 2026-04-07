@@ -6,37 +6,22 @@ $breakpoint-4k: 2560px !default;
 $breakpoint-ultrawide: 3440px !default;
 
 :root {
+  --color-bg:             #1e1e1e;
+  --color-text-primary:   #f0f0f0;
+  --color-text-secondary: #c8c8c8;
+  --color-text-body:      #aaaaaa;
+  --color-text-muted:     #999999;
+  --color-text-subtle:    #888888;
+  --color-accent:         #e02020;
+  --color-border:         #2a2a2a;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Roboto Slab', Georgia, serif;
+
   --spacing-xs: 0.625rem;
   --spacing-sm: 0.9375rem;
   --spacing-md: 1.875rem;
   --spacing-lg: 2.8125rem;
-  --spacing-article-mobile: 1.5rem;
-  --spacing-article-desktop: 3rem;
-}
 
-.body {
-  --color-background: #eaeaea;
-  --color-highlight: #cd0000;
-  --color-nav-background: #373737;
-  --color-nav-links: #ff9a9a;
-  --color-text: #333;
-  --color-heading: #000;
-  --color-highlight-text: #fff;
-  --color-links: #cd0000;
-  --color-slider-knob: #fff;
-  --color-slider-shadow: #2020203d;
-  --color-slider-focus: #2196f3;
-  --color-slider-track: #cd0000;
-  min-height: 100vh;
-}
-
-#switch:checked + .body {
-  --color-heading: #fff;
-  --color-text: #eee;
-  --color-background: #373737;
-  --color-nav-background: #eaeaea;
-  --color-links: #ff9a9a;
-  --color-nav-links: #cd0000;
-  --color-slider-track: #ccc;
-  --color-slider-knob: #000;
+  --content-max-width: 800px;
 }
