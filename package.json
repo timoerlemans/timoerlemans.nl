@@ -22,7 +22,7 @@
     "@11ty/eleventy": "^3.0.0",
     "clean-css": "^5.3.3",
     "date-fns": "^4.1.0",
-    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-attrs": "^5.0.1",
     "modern-normalize": "^3.0.1",
     "sass": "^1.43.2"
   },
