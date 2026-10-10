@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import helpers from './helpers.js';
+import helpers from '../src/_data/helpers.js';
 
 describe('helpers', () => {
   describe('getLinkActiveState', () => {

@@ -1,0 +1,4 @@
+# Use the prebuilt binaries from optional dependencies; keep install scripts disabled.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: false

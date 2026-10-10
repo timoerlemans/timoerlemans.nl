@@ -1,4 +1,4 @@
-@import 'variables';
+@use 'variables' as *;
 
 .skip-link {
   position: absolute;

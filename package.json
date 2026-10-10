@@ -5,8 +5,8 @@
   "type": "module",
   "main": "eleventy.config.js",
   "scripts": {
-    "start": "NODE_ENV=development npx eleventy --serve",
-    "production": "NODE_ENV=production npx eleventy",
+    "start": "NODE_ENV=development eleventy --serve",
+    "production": "NODE_ENV=production eleventy",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run"
@@ -14,21 +14,22 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@12.10.1",
   "engines": {
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.6",
     "clean-css": "^5.3.3",
-    "date-fns": "^4.1.0",
-    "markdown-it-attrs": "^4.1.6",
+    "date-fns": "^4.4.0",
+    "markdown-it": "^15.0.2",
+    "markdown-it-attrs": "^5.0.1",
     "modern-normalize": "^3.0.1",
-    "sass": "^1.43.2"
+    "sass": "^1.105.1"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.0.0",
-    "vitest": "^4.0.18"
+    "eslint": "^10.12.0",
+    "vitest": "^5.0.3"
   }
 }
