@@ -114,6 +114,10 @@ dist
 # Claude Code MCP config (may contain tokens)
 .mcp.json
 
+# Claude Code lokale hook-instellingen (workstation-specifiek)
+.claude/settings.json
+.claude/hooks/
+
 # Superpowers brainstorm sessies
 .superpowers/
 
