@@ -13,9 +13,15 @@ export function setupCssBuild(config) {
   config.on('eleventy.beforeConfig', () => {
     const { input, includes } = config.directories;
     config.addWatchTarget(path.join(input, 'assets/css'));
-    const generatedCss = path.relative(input, path.join(includes, 'css')).replaceAll('\\', '/');
-    // A leading glob also matches absolute input paths used by programmatic builds.
-    config.watchIgnores.add(`**/${generatedCss}/**`);
+    const generatedCss = path.resolve(includes, 'css');
+    const absoluteSuffix = path.relative(path.parse(generatedCss).root, generatedCss).replaceAll('\\', '/');
+    // Leading globs bypass Eleventy's relative-path normalization. Cover absolute
+    // programmatic paths and relative CLI paths without unresolved parent segments.
+    config.watchIgnores.add(`**/${absoluteSuffix}/**`);
+    const relativeSuffix = path.relative(process.cwd(), generatedCss).replaceAll('\\', '/');
+    if (!relativeSuffix.startsWith('../') && !path.isAbsolute(relativeSuffix)) {
+      config.watchIgnores.add(`**/${relativeSuffix}/**`);
+    }
   });
 
   config.on('eleventy.before', ({ directories }) => {

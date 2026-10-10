@@ -18,14 +18,14 @@ function writeStyle(name, content) {
   fs.writeFileSync(filename, content);
 }
 
-function createSite(runMode = 'build', onBuild = () => {}) {
+function createSite(runMode = 'build', onBuild = () => {}, includes = 'fragments') {
   return new Eleventy(input, output, {
     configPath: false,
     runMode,
     config(config) {
       config.setQuietMode(true);
       config.setUseGitIgnore(false);
-      config.setIncludesDirectory('fragments');
+      config.setIncludesDirectory(includes);
       config.on('eleventy.after', onBuild);
       setupCssBuild(config);
     }
@@ -130,9 +130,9 @@ describe('CSS build through Eleventy', () => {
     await expect(site.write()).rejects.toThrow(/fonts/);
   });
 
-  it('watches partial changes without rebuilding forever on generated includes', async () => {
+  it.each(['fragments', '../fragments'])('watches partial changes without rebuilding forever with includes at %s', async includes => {
     let builds = 0;
-    site = createSite('watch', () => { builds++; });
+    site = createSite('watch', () => { builds++; }, includes);
     await site.init();
     await site.watch();
     await new Promise(resolve => site.watcher.once('ready', resolve));
